@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="liuzeshuen.quartz.dao.JdbcBeanMapper">
+
+    <select id="selectlocalhost" resultMap="jdbcResult">
+        select ip,username,password,port,backuppath,db from jdbc where ip like 'localhost' or ip like '127.0.0.1'
+    </select>
+
+    <select id="selectDistance" resultMap="jdbcResult">
+        select ip,username,password,port,backuppath,db from jdbc where ip not like 'localhost' and ip not like '127.0.0.1'
+    </select>
+
+    <resultMap id="jdbcResult" type="liuzeshuen.quartz.model.JdbcBean">
+        <result property="IP" column="ip"/>
+        <result property="userName" column="username"/>
+        <result property="password" column="password"/>
+        <result property="port" column="port"/>
+        <result property="backupPath" column="backuppath"/>
+        <result property="DB" column="db"/>
+    </resultMap>
+
+</mapper>
