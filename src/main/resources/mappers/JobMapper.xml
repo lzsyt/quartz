@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="liuzeshuen.quartz.dao.JobAndTriggerMapper">
+<mapper namespace="com.example.quartz.dao.JobAndTriggerMapper">
 
 <!--    <select id="getJobAndTriggerDetails" resultType="JobAndTrigger">
 SELECT
@@ -18,7 +18,7 @@ JOIN qrtz_simple_triggers ON qrtz_job_details.JOB_NAME = qrtz_triggers.JOB_NAME
 AND qrtz_triggers.TRIGGER_NAME = qrtz_simple_triggers.TRIGGER_NAME
 AND qrtz_triggers.TRIGGER_GROUP = qrtz_simple_triggers.TRIGGER_GROUP
 </select>-->
-    <select id="getJobAndTriggerDetails" resultType="liuzeshuen.quartz.model.JobAndTrigger">
+    <select id="getJobAndTriggerDetails" resultType="com.example.quartz.model.JobAndTrigger">
         SELECT DISTINCT
         QRTZ_JOB_DETAILS.JOB_NAME,
         QRTZ_JOB_DETAILS.JOB_GROUP,

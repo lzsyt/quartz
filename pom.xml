@@ -110,7 +110,7 @@
 						<manifest>
 							<!--    <addClasspath>true</addClasspath>
                                  <classpathPrefix>lib/</classpathPrefix>-->
-							<mainClass>liuzeshuen.quartz.SpringbootQuartzApplication</mainClass>
+							<mainClass>com.example.quartz.SpringbootQuartzApplication</mainClass>
 						</manifest>
 					</archive>
 
